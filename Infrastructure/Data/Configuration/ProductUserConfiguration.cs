@@ -14,9 +14,13 @@ public class ProductUserConfiguration : IEntityTypeConfiguration<ProductUser>
     {
         builder.ToTable("ProductoUsuario");
 
-        builder.HasOne(p=>p.User)
-        .WithMany(p=>p.Products)
-        .HasForeignKey(p=>p.IdProducto);
+        builder.HasOne(p=>p.Users)
+        .WithMany(p=>p.ProductsUsers)
+        .HasForeignKey(p=>p.IdUser);
+
+        builder.HasOne(p=>p.Products)
+        .WithMany(p=>p.ProductsUsers)
+        .HasForeignKey(p=>p.IdProduct);
 
     }
 }

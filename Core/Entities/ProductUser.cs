@@ -10,6 +10,6 @@ namespace Core.Entities;
         public int IdUser { get; set;}
         public int IdProduct { get; set;}
 
-        public User ? User { get; set;}
-        public Product ? Product { get; set;}
+        public User ? Users { get; set;}
+        public Product ? Products { get; set;}
     }
